@@ -20,15 +20,15 @@ import java.time.LocalDate;
  *
  * @author martinbl
  */
-@WebServlet(name = "RegistroServlet", urlPatterns = {"/registro"})
+@WebServlet(name = "RegistroServlet", urlPatterns = { "/registro" })
 public class RegistroServlet extends HttpServlet {
 
     private final IUsuarioService usuarioService = new UsuarioService();
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-            throws ServletException, IOException{
-        
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
         request.setCharacterEncoding("UTF-8");
 
         String nombre = request.getParameter("txt_nombre");
@@ -52,8 +52,7 @@ public class RegistroServlet extends HttpServlet {
                     estado,
                     tipoCuenta,
                     fechaNacimiento,
-                    aceptoTerminos
-            );
+                    aceptoTerminos);
 
             request.setAttribute("mensaje", "Registro exitoso. Ahora puedes iniciar sesión.");
             request.getRequestDispatcher("/views/auth/iniciar-sesion.jsp").forward(request, response);

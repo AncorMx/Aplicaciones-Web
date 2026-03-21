@@ -1,12 +1,18 @@
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\controller\AutenticacionServlet.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\model\Album.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\dao\UsuarioDAO.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\util\JPAUtil.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\dao\IUsuarioDAO.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\model\Usuario.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\controller\RegistroServlet.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\service\IUsuarioService.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\JakartaRestConfiguration.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\service\UsuarioService.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\controller\AppListener.java
-D:\ITSON\AplicacionesWeb\Semana9\Practicas\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\resources\JakartaEE10Resource.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\resources\JakartaEE10Resource.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\service\UsuarioService.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\JakartaRestConfiguration.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\util\JPAUtil.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\service\AlbumService.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\controller\AlbumServlet.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\controller\AuthFilter.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\controller\RegistroServlet.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\dao\IUsuarioDAO.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\service\IUsuarioService.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\dao\UsuarioDAO.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\model\Album.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\controller\AutenticacionServlet.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\model\Usuario.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\service\IAbumService.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\dao\IAlbumDAO.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\com\mycompany\nubulamusicwebaplication\controller\AppListener.java
+C:\Users\angel\Desktop\Aplicaciones Web\Practica 10\Nebula_Music_2.0\src\main\java\dao\AlbumDAO.java
