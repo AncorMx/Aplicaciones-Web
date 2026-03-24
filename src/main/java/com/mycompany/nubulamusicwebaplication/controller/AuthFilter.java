@@ -38,6 +38,11 @@ public class AuthFilter implements Filter {
 
         boolean resourceStaticRequest = path.contains("/assets/") || path.contains("css") || path.contains("img");
 
+        if (path.startsWith(req.getContextPath() + "/api/")) {
+            chain.doFilter(request, response);
+            return;
+        }
+
         if (loggedIn || loginRequest || resourceStaticRequest || path.endsWith("tyc.jsp")) {
             chain.doFilter(request, response);
         } else {

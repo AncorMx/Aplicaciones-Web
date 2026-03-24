@@ -1,27 +1,29 @@
 <%-- any content can be specified here e.g.: --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8" %>
 <nav class="main-nav">
+        <!-- Logo -->
+        <a href="${pageContext.request.contextPath}/index.jsp" class="logo">
+            <img src="${pageContext.request.contextPath}/assets/img/nebula-03.svg" alt="Nebula Logo">
+        </a>
 
+        <!-- Botón de hamburguesa (para móvil) -->
+        <input type="checkbox" id="menu-toggle">
 
-    <a class="logo" href="${pageContext.request.contextPath}/index.jsp">
-        <img src="${pageContext.request.contextPath}/assets/img/nebula-03.svg" alt="Nebula Music">
-    </a>
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-    <!-- Checkbox oculto -->
-    <input type="checkbox" id="menu-toggle">
-
-    <!-- Botón hamburguesa -->
-    <label for="menu-toggle" class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-
-    <!-- Menú -->
-    <ul class="nav-links">
-        <li><a href="${pageContext.request.contextPath}/views/aplication/about.jsp">Nosotros</a></li>
-        <li><a href="${pageContext.request.contextPath}/views/aplication/comunidad.jsp">Comunidad</a></li>
-        <li><a href="${pageContext.request.contextPath}/albums">Mis Álbumes</a></li>
-    </ul>
-
+        <!-- Enlaces del menú -->
+        <ul class="nav-links">
+            <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+            <li><a href="${pageContext.request.contextPath}/views/aplication/about.jsp">Planes</a></li>
+            <li><a href="${pageContext.request.contextPath}/comunidad">Comunidad</a></li>
+            <li><a href="${pageContext.request.contextPath}/albums">Mis albums</a></li>
+            <li><a href="${pageContext.request.contextPath}/registro">Registro</a></li>
+            <li><a href="${pageContext.request.contextPath}/iniciar-sesion">Log in</a></li>
+            <li><a href="${pageContext.request.contextPath}/autenticacion?action=logout">Log out</a></li>
+        </ul>
 </nav>

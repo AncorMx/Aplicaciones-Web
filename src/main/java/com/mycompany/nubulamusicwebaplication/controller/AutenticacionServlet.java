@@ -35,6 +35,12 @@ public class AutenticacionServlet extends HttpServlet {
         try {
             Usuario usuario = usuarioService.autenticar(correo, contrasenia);
 
+            HttpSession sessionAnterior = request.getSession(false);
+
+            if (sessionAnterior != null) {
+                sessionAnterior.invalidate();
+            }
+
             HttpSession sesion = request.getSession(true);
             sesion.setAttribute("usuario", usuario);
             sesion.setAttribute("correo", usuario.getCorreo());
