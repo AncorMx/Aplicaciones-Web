@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "nebula-music-api-collection",
+		"name": "UsuariosAPI",
+		"description": "Colección de Postman para la API REST de Nebula Music con autenticación JWT.\n\n## Flujo de uso:\n1. Ejecutar \"Login\" para obtener el token\n2. El token se guarda automáticamente en la variable {{jwt_token}}\n3. Los demás endpoints usan el token automáticamente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/NebulaMusicWebAplication"
+		},
+		{
+			"key": "jwt_token",
+			"value": ""
+		}
+	],
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"if (pm.response.code === 200) {",
+									"    var jsonData = pm.response.json();",
+									"    if (jsonData.success && jsonData.message) {",
+									"        pm.collectionVariables.set('jwt_token', jsonData.message);",
+									"        console.log('Token guardado exitosamente');",
+									"    }",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"correo\": \"prueba@gmail.com\",\n    \"contrasenia\": \"12345678\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/",
+							"host": ["{{base_url}}"],
+							"path": ["api", "auth", ""]
+						},
+						"description": "Inicia sesión con correo y contraseña. Retorna un JWT token que se guarda automáticamente en la variable jwt_token."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "ObtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/usuario",
+							"host": ["{{base_url}}"],
+							"path": ["api", "usuario"]
+						},
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Obtiene la lista de todos los usuarios. Requiere token JWT."
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUsuarioPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/usuario/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "usuario", "1"]
+						},
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Obtiene un usuario específico por su ID. Requiere token JWT."
+					},
+					"response": []
+				},
+				{
+					"name": "CrearUsuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Nuevo Usuario\",\n    \"correo\": \"nuevo@gmail.com\",\n    \"contrasenia\": \"12345678\",\n    \"pseudonimo\": \"nuevo-001\",\n    \"estado\": \"Sonora\",\n    \"cuenta\": \"free\",\n    \"fechaNacimiento\": \"2000-01-15\",\n    \"terminosAceptados\": true\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/usuario",
+							"host": ["{{base_url}}"],
+							"path": ["api", "usuario"]
+						},
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Crea un nuevo usuario. Requiere token JWT."
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Usuario Actualizado\",\n    \"correo\": \"actualizado@gmail.com\",\n    \"pseudonimo\": \"actualizado-001\",\n    \"estado\": \"Sonora\",\n    \"cuenta\": \"premium\",\n    \"fechaNacimiento\": \"2000-01-15\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/usuario/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "usuario", "1"]
+						},
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Actualiza un usuario existente por ID. Requiere token JWT."
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/usuario/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "usuario", "1"]
+						},
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Elimina un usuario por ID. Requiere token JWT."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
